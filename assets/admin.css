@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --border: #c3c4c7;
+  --light-bg: #f6f7f7;
+}
+
+.gstat-wrap *{
+  font-family: 'Roboto'
+}
+
+.gstat-table {
+  border-collapse: collapse;
+  table-layout: auto;
+  width: 100%;
+  border: 1px solid var(--border);
+}
+
+.gstat-table thead tr th,
+.gstat-table tfoot tr td,
+.gstat-table tbody tr td {
+  font-size: 14px;
+  font-weight: 400;
+  color: #191919;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  padding: 8px; 
+}
+
+.gstat-table tfoot tr td,
+.gstat-table thead tr th {
+  background: #2271b128;
+  font-weight: 500;
+  color: #191919;
+}
+
+.gstat-table tbody tr {
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+
+.gstat-table tbody tr:nth-child(2n + 1) {
+  background: var(--light-bg);
+}
+
+span.order-status, .error, .status-deactive, .status-active  {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  display: inline-block ;
+}
+
+.order-status.completed {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.order-status.processing, .status-active {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.order-status.on-hold {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.gstat_field_group{
+  display: flex ;
+  flex-direction: column ;
+  gap: 5px; 
+}
+
+.gstat_field_group label{
+  display: block ;
+  color: #000000 ;
+  font-size: 13px; 
+  font-weight: 500 ;
+  font-family: 'Roboto'
+}
+
+.gstat-filter{
+  display: flex ;
+  align-items: flex-end ;
+  gap: 15px ;
+  margin-bottom: 20px ;
+}
+
+.gstat_field_group select{
+  font-size: 14px; 
+  font-family: 'Roboto'
+}
+
+.gstat_pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 !important;
+  padding: 0 ;
+}
+
+.gstat_pagination li{
+  width: 30px ;
+  height: 30px ;
+  font-size: 14px; 
+  font-weight: 500 ;
+  border: 1px solid #d9d9d9 ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center;
+  margin-right: -1px; 
+  cursor: pointer ;
+  margin: 0 ;
+}
+
+.gstat_pagination li:hover{
+  background: var(--light-bg)
+}
+
+.filter-period{
+  display: flex ;
+  align-items: flex-end ;
+  gap: 12px ;
+  margin-bottom: 20px ;
+}
+
+.gstat_page_btn.disabled{
+  opacity: 0.5 ;
+  pointer-events: none;
+}
